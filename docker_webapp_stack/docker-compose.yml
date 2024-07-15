@@ -9,9 +9,6 @@ services:
     deploy:
       # Run 5 instances of that image as a service called web
       replicas: 5
-       placement:
-        preferences:
-          - spread: node.id  # Spread across nodes by ID
       resources:
         # Limiting each one to use, at most, 10% of a single core of CPU time and 50MB of RAM.
         limits:
